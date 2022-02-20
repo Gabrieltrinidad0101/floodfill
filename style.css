@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "paint cube"
+                          "canvas canvas";
+
+}
+
+.paint{
+    grid-area: paint;
+}
+
+.cube{
+    grid-area: cube;
+}
+
+canvas{
+    border: 1px solid #000;
+    grid-area: canvas;
+}
