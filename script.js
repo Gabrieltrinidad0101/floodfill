@@ -1,8 +1,10 @@
+import FloodFill from "./floodfill.js"
 const canvas = document.querySelector("canvas")
 const ctx = canvas.getContext("2d")
 const cube = document.querySelector(".cube")
 const paint = document.querySelector(".paint")
 
+const floodfill = new FloodFill(ctx)
 
 let functionRun = "paint"
 
@@ -13,9 +15,6 @@ cube.addEventListener("click",_=>{
 paint.addEventListener("click",_=>{
     functionRun = "paint"
 })
-
-canvas.width = 1000
-canvas.height = 500
 
 let canDraw = false
 
@@ -36,7 +35,11 @@ canvas.addEventListener("mousedown",e=>{
     if(functionRun === "paint"){
         paintDown(e)
         canDraw = true
+        return
     }
+    const x = e.clientX - canvas.offsetLeft
+    const y = e.clientY - canvas.offsetTop
+    floodfill.flood(x,y,[0,0,0,255])
 })
 
 canvas.addEventListener("mousemove",e=>{
