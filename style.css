@@ -51,9 +51,8 @@ body{
   }
 
 canvas{
-        grid-area: canvas;
+    grid-area: canvas;
     border-radius: 50px;
-background: linear-gradient(145deg, #2f5b94, #386caf);
-box-shadow:  20px 20px 60px #2c568b,
+    box-shadow:  20px 20px 60px #2c568b,
              -20px -20px 60px #3c74bd;
 }

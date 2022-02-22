@@ -4,6 +4,10 @@ const ctx = canvas.getContext("2d")
 const cube = document.querySelector(".cube")
 const paint = document.querySelector(".paint")
 
+//background
+ctx.fillStyle = '#2f5b94';
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
 const floodfill = new FloodFill(ctx)
 
 let functionRun = "paint"
