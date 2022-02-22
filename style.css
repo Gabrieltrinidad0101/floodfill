@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+    background: #3465a4;
+}
+
 .container{
     width: 100%;
     height: 100vh;
@@ -19,8 +23,10 @@
     grid-template-rows: 10% 90%;
     grid-template-areas: "paint cube"
                           "canvas canvas";
+    gap:10px;
 
 }
+
 
 .paint{
     grid-area: paint;
@@ -30,7 +36,24 @@
     grid-area: cube;
 }
 
+.btn{
+    background: #3498db;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+}
+
+
+.btn:hover {
+    background: #3cb0fd;
+  }
+
 canvas{
-    border: 1px solid #000;
-    grid-area: canvas;
+        grid-area: canvas;
+    border-radius: 50px;
+background: linear-gradient(145deg, #2f5b94, #386caf);
+box-shadow:  20px 20px 60px #2c568b,
+             -20px -20px 60px #3c74bd;
 }
