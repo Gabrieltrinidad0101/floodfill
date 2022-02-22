@@ -39,7 +39,7 @@ canvas.addEventListener("mousedown",e=>{
     }
     const x = e.clientX - canvas.offsetLeft
     const y = e.clientY - canvas.offsetTop
-    floodfill.flood(x,y,[0,0,0,255])
+    floodfill.flood(x,y,[0,255,0,255])
 })
 
 canvas.addEventListener("mousemove",e=>{
